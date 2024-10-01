@@ -1,0 +1,105 @@
+@layer root, reset, base;
+ 
+@layer root {
+  :root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+
+    --color-gray-100: #f7f7f7;
+    --color-gray-200: #e1e3e1;
+    --color-gray-300: #d7d7d7;
+    --color-gray-400: #c7c7c7;
+    --color-gray-500: #0d0d0d;
+
+    --color-blue-100: #c3d8fb;
+    --color-blue-200: #1a73e8;  
+    --color-blue-300: #0b57d0;
+    --color-blue-400: #0842a0;
+
+    --color-green-100: #cef0d7;
+    --color-green-200: #34A853;
+    --color-green-300: #216c35;
+    --color-green-400: #0f3118;
+
+    --color-yellow-100: #fddd82;
+    --color-yellow-200: #FBBC05;
+    --color-yellow-300: #d19c03;
+    --color-yellow-400: #7d5e02;
+
+    --color-red-100: #e93e2f;
+    --color-red-200: #EA4335;
+    --color-red-300: #d02416;
+    --color-red-400: #b3261e;
+
+    --bg-light: var(--color-white);
+
+    --text-light: var(--color-light);
+
+    --font-primary: "Roboto", sans-serif;
+    --font-secondary: "Lato", sans-serif;
+    --font-size-base: 16px;
+    --font-size-sm: .75rem;
+    --font-size-md: 1.5rem;
+    --font-size-lg: 2rem;
+
+    --cubic-bezier: cubic-bezier(.455, .03, .515, .955);
+    --transition-duration: 0.2s;
+    --transition-all: all var(--transition-duration) var(--cubic-bezier);
+
+    --container-sm: 540px;
+    --container-md: 720px;
+    --container-lg: 992px;
+    --container-xl: 1140px;
+    --container-xxl: 1320px;
+    --container-padding-inline: 1rem;
+
+    --google-gradient: linear-gradient(90deg, var(--color-blue-200) 25%, var(--color-red-200) 25%, var(--color-red-200) 50%, var(--color-yellow-200) 50%, var(--color-yellow-200) 75%, var(--color-green-200) 75%)
+  }
+}
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    box-sizing: border-box;
+  }
+}
+
+@layer base {
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 375px;
+    line-height: 1.6;
+    background-color: var(--bg-light);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    color: var(--color-gray-500);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-all);
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+}
